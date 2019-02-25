@@ -1,0 +1,33 @@
+{
+  "name": "reg-log-api",
+  "version": "1.0.0",
+  "description": "Registration and login Api",
+  "main": "server.ts",
+  "scripts": {
+    "watch-ts": "tsc -w",
+    "start": "NODE_ENV=development nodemon --exec ts-node src/server.ts",
+    "watch": "concurrently -k -p \"[{name}]\" -n \"TypeScript, Node\" -c \"yello.bold, cyan.bold\" \"yarn run watch-ts\" \"yarn run watch-node\""
+  },
+  "keywords": [
+    "nodejs",
+    "express",
+    "typescript",
+    "databases"
+  ],
+  "author": "Mojalefa",
+  "license": "ISC",
+  "devDependencies": {
+    "@types/express": "^4.16.1",
+    "concurrently": "^4.1.0",
+    "express": "^4.16.4",
+    "nodemon": "^1.18.10",
+    "ts-node": "^8.0.2",
+    "typescript": "^3.3.3333"
+  },
+  "dependencies": {
+    "@types/node": "^11.9.5",
+    "pg": "^7.8.1",
+    "reflect-metadata": "^0.1.13",
+    "typeorm": "^0.2.13"
+  }
+}
